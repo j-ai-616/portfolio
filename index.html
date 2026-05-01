@@ -121,7 +121,6 @@
       box-shadow: 0 10px 30px rgba(31, 41, 51, 0.05);
     }
 
-    .span-8 { grid-column: span 8; }
     .span-6 { grid-column: span 6; }
     .span-4 { grid-column: span 4; }
     .span-12 { grid-column: span 12; }
@@ -229,7 +228,7 @@
     }
 
     @media (max-width: 820px) {
-      .span-8, .span-6, .span-4, .span-12 {
+      .span-6, .span-4, .span-12 {
         grid-column: span 12;
       }
 
@@ -302,9 +301,9 @@
     <section>
       <div class="container">
         <div class="section-title">
-          <h2>Featured Projects</h2>
+          <h2>Featured Business & Analytics Projects</h2>
           <p class="section-note">
-            Selected work showing applied analytics, customer insight, dashboard development, and business-oriented AI.
+            Four core projects showing prediction, customer insight, exploratory analysis, and experiment-based decision making.
           </p>
         </div>
 
@@ -357,7 +356,7 @@
             </div>
           </article>
 
-          <article class="card span-4">
+          <article class="card span-6">
             <h3>EDA Report</h3>
             <p class="tagline">Exploratory data analysis · Data interpretation · Reporting</p>
             <p>
@@ -369,12 +368,50 @@
               <span class="chip">EDA</span>
               <span class="chip">Data Analysis</span>
               <span class="chip">Reporting</span>
+              <span class="chip">Insight Generation</span>
             </div>
             <div class="actions">
-              <a class="button" href="https://github.com/j-ai-616/eda_report" target="_blank">View Project</a>
+              <a class="button primary" href="https://github.com/j-ai-616/eda_report" target="_blank">View Project</a>
             </div>
           </article>
 
+          <article class="card span-6">
+            <h3>E-commerce Conversion A/B Test Project</h3>
+            <p class="tagline">Experiment design · Conversion uplift · Statistical testing</p>
+            <p>
+              Designed an e-commerce A/B testing project to compare conversion performance between two user groups.
+              The project focuses on KPI definition, uplift measurement, statistical significance, confidence intervals,
+              and business implications for growth optimization.
+            </p>
+            <ul class="bullets">
+              <li>Structured an experiment framework around conversion, add-to-cart, and revenue-related metrics.</li>
+              <li>Applied hypothesis testing to evaluate whether observed uplift is statistically meaningful.</li>
+              <li>Translated statistical results into decision-oriented recommendations.</li>
+            </ul>
+            <div class="chips">
+              <span class="chip">A/B Test</span>
+              <span class="chip">Conversion Rate</span>
+              <span class="chip">Hypothesis Testing</span>
+              <span class="chip">Growth Analytics</span>
+            </div>
+            <div class="actions">
+              <a class="button primary" href="https://github.com/j-ai-616/ecommerce_ab_test_project" target="_blank">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Supporting Projects & Applications</h2>
+          <p class="section-note">
+            Additional personal projects showing practical implementation, service thinking, and user-facing application ideas.
+          </p>
+        </div>
+
+        <div class="grid">
           <article class="card span-4">
             <h3>Restaurant Data Project</h3>
             <p class="tagline">Data handling · Service-oriented analysis</p>
