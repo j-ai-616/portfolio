@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Ji-Eun Son | Cultural Technology & Human-Centered AI Portfolio</title>
+
   <style>
     :root {
       --bg: #f7f7f4;
@@ -13,10 +15,15 @@
       --card: #ffffff;
       --accent: #2f4f4f;
       --accent-soft: #e7eeee;
+      --shadow: rgba(31, 41, 51, 0.06);
     }
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -30,7 +37,7 @@
     a {
       color: var(--accent);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     a:hover {
@@ -44,13 +51,13 @@
     }
 
     header {
-      padding: 72px 0 56px;
+      padding: 76px 0 58px;
       border-bottom: 1px solid var(--line);
     }
 
     .eyebrow {
       color: var(--accent);
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-size: 0.82rem;
@@ -58,16 +65,16 @@
     }
 
     h1 {
-      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
       line-height: 1.08;
-      margin: 0 0 20px;
-      letter-spacing: -0.04em;
+      margin: 0 0 18px;
+      letter-spacing: -0.045em;
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.85rem;
       margin: 0 0 22px;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
     h3 {
@@ -79,25 +86,46 @@
       margin: 0 0 16px;
     }
 
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
     .lead {
       font-size: 1.18rem;
       color: var(--muted);
-      max-width: 820px;
+      max-width: 860px;
     }
 
     .meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
+      gap: 12px;
       margin-top: 28px;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
     }
 
     .meta span {
       background: var(--accent-soft);
       padding: 8px 12px;
       border-radius: 999px;
+    }
+
+    .top-actions,
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .top-actions {
+      margin-top: 28px;
     }
 
     section {
@@ -116,7 +144,7 @@
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 26px;
-      box-shadow: 0 10px 30px rgba(31, 41, 51, 0.04);
+      box-shadow: 0 10px 30px var(--shadow);
     }
 
     .span-4 {
@@ -153,16 +181,28 @@
       background: var(--accent-soft);
       padding: 6px 9px;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    ul {
-      margin: 12px 0 0;
-      padding-left: 20px;
+    .btn {
+      display: inline-block;
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.86rem;
+      font-weight: 800;
+      text-decoration: none;
     }
 
-    li {
-      margin-bottom: 8px;
+    .btn:hover {
+      text-decoration: none;
+      opacity: 0.9;
+    }
+
+    .btn.secondary {
+      background: var(--accent-soft);
+      color: var(--accent);
     }
 
     .project-title {
@@ -179,12 +219,18 @@
     }
 
     .quote {
-      font-size: 1.25rem;
+      font-size: 1.22rem;
       line-height: 1.55;
       color: var(--ink);
       border-left: 4px solid var(--accent);
       padding-left: 18px;
-      margin-top: 12px;
+      margin-top: 14px;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.94rem;
+      margin-top: 16px;
     }
 
     footer {
@@ -216,8 +262,12 @@
 <body>
   <header>
     <div class="container">
-      <div class="eyebrow">Cultural Technology · Human-Centered AI · Computational Social Science</div>
+      <div class="eyebrow">
+        Cultural Technology · Human-Centered AI · Computational Social Science
+      </div>
+
       <h1>Ji-Eun Son</h1>
+
       <p class="lead">
         Interdisciplinary researcher interested in how AI systems shape cultural consumption,
         human experience, and digital platform behavior, with a background in sociology,
@@ -230,13 +280,20 @@
         <span>Science-track background through secondary education</span>
         <span>Python · SQL · Stata · Machine Learning · NLP</span>
       </div>
+
+      <div class="top-actions">
+        <a class="btn" href="https://github.com/j-ai-616" target="_blank">GitHub</a>
+        <a class="btn secondary" href="https://j-ai-616.github.io/portfolio/" target="_blank">Portfolio</a>
+        <a class="btn secondary" href="mailto:yjson616@gmail.com">Email</a>
+      </div>
     </div>
   </header>
 
   <main class="container">
 
-    <section>
+    <section id="research-direction">
       <h2>Research Direction</h2>
+
       <div class="grid">
         <div class="card span-8">
           <p>
@@ -245,11 +302,13 @@
             in how recommendation algorithms, digital platforms, and generative AI systems influence
             cultural discovery, taste formation, emotional experience, and user decision-making.
           </p>
+
           <p>
             Drawing on my background in sociology and applied data science, I aim to study not only
             whether AI systems perform well technically, but also how they reshape the way people
             encounter films, music, media content, services, and cultural meaning.
           </p>
+
           <div class="quote">
             How can AI systems recommend not only what users are likely to click,
             but what may become meaningful in their cultural and emotional lives?
@@ -272,32 +331,37 @@
       </div>
     </section>
 
-    <section>
+    <section id="selected-projects">
       <h2>Selected Projects</h2>
 
       <div class="grid">
 
         <article class="card span-12">
           <div class="project-title">
-            <h3>AI-Based SaaS Churn Prediction & Retention Strategy</h3>
-            <small>Machine Learning · XAI · Streamlit</small>
+            <h3>CGV Movie Review Analysis</h3>
+            <small>NLP · Sentiment Analysis · Topic Modeling</small>
           </div>
+
           <p class="tagline">
-            An explainable AI project for predicting customer churn and translating model outputs
-            into actionable retention strategies.
+            A movie review analytics project exploring audience responses, sentiment patterns,
+            and topic structures in Korean cinema review data.
           </p>
+
           <ul>
-            <li>Built an account-level churn prediction pipeline using subscription, feature usage, support ticket, and account data.</li>
-            <li>Excluded churn event records from model features to prevent data leakage and used them for post-hoc interpretation.</li>
-            <li>Engineered behavioral and operational features such as active subscription ratio, error rate, support response time, days since last usage, and recent upgrade/downgrade flags.</li>
-            <li>Compared machine learning and deep learning models, tuned the operational threshold, and used SHAP for global and local explanation.</li>
-            <li>Developed a Streamlit dashboard to communicate churn risk, model reasoning, and retention actions.</li>
+            <li>Analyzed large-scale CGV movie review data to understand audience perception and content-related responses.</li>
+            <li>Applied text preprocessing, sentiment analysis, and topic modeling to extract interpretable patterns from user-generated reviews.</li>
+            <li>Connected computational text analysis with cultural consumption, audience experience, and platform-based review behavior.</li>
           </ul>
+
           <div class="tags">
-            <span class="tag">Explainable AI</span>
-            <span class="tag">Customer Behavior</span>
-            <span class="tag">Predictive Modeling</span>
-            <span class="tag">Human Decision Support</span>
+            <span class="tag">Movie Reviews</span>
+            <span class="tag">Cultural Analytics</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Audience Experience</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://github.com/j-ai-616/cgv-review-pilot-analysis" target="_blank">GitHub</a>
           </div>
         </article>
 
@@ -306,10 +370,12 @@
             <h3>Smart Home App Review Analytics</h3>
             <small>NLP · BERTopic · UX Analytics</small>
           </div>
+
           <p class="tagline">
             A computational analysis project examining how users experience smart home ecosystems
             through app reviews, update contexts, and platform-specific feedback.
           </p>
+
           <ul>
             <li>Collected large-scale user reviews from smart home apps such as LG ThinQ and Samsung SmartThings.</li>
             <li>Designed a pipeline for preprocessing, embedding, topic modeling, sentiment analysis, and temporal interpretation.</li>
@@ -317,12 +383,50 @@
             <li>Explored how app updates may reshape user experience and perceived platform reliability over time.</li>
             <li>Positioned app review data as a cultural and behavioral trace of human-technology interaction.</li>
           </ul>
+
           <div class="tags">
             <span class="tag">Cultural Data Analytics</span>
             <span class="tag">User Experience</span>
             <span class="tag">Smart Home</span>
             <span class="tag">Topic Modeling</span>
             <span class="tag">Platform Studies</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="#" target="_blank">GitHub</a>
+            <a class="btn secondary" href="#" target="_blank">Research Proposal</a>
+            <a class="btn secondary" href="#" target="_blank">Technical Write-up</a>
+          </div>
+        </article>
+
+        <article class="card span-12">
+          <div class="project-title">
+            <h3>AI-Based SaaS Churn Prediction & Retention Strategy</h3>
+            <small>Machine Learning · XAI · Streamlit</small>
+          </div>
+
+          <p class="tagline">
+            An explainable AI project for predicting customer churn and translating model outputs
+            into actionable retention strategies.
+          </p>
+
+          <ul>
+            <li>Built an account-level churn prediction pipeline using subscription, feature usage, support ticket, and account data.</li>
+            <li>Excluded churn event records from model features to prevent data leakage and used them for post-hoc interpretation.</li>
+            <li>Engineered behavioral and operational features such as active subscription ratio, error rate, support response time, days since last usage, and recent upgrade/downgrade flags.</li>
+            <li>Compared machine learning and deep learning models, tuned the operational threshold, and used SHAP for global and local explanation.</li>
+            <li>Developed a Streamlit dashboard to communicate churn risk, model reasoning, and retention actions.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Explainable AI</span>
+            <span class="tag">Customer Behavior</span>
+            <span class="tag">Predictive Modeling</span>
+            <span class="tag">Human Decision Support</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://github.com/j-ai-616/RavenStack_Churn_Project" target="_blank">GitHub</a>
           </div>
         </article>
 
@@ -331,21 +435,57 @@
             <h3>E-commerce Behavioral Analytics & A/B Test Simulation</h3>
             <small>Funnel Analysis · Experiment Design · Statistics</small>
           </div>
+
           <p class="tagline">
             A behavioral analytics project identifying conversion bottlenecks and designing an
             experiment-based strategy for improving purchase conversion.
           </p>
+
           <ul>
             <li>Analyzed large-scale e-commerce behavioral log data to understand user journeys from view to cart to purchase.</li>
             <li>Identified funnel drop-offs and product/category-level patterns in user behavior.</li>
             <li>Designed an A/B test simulation framework to evaluate potential conversion improvement strategies.</li>
             <li>Translated behavioral data into business recommendations for product and growth decision-making.</li>
           </ul>
+
           <div class="tags">
             <span class="tag">Digital Platform Behavior</span>
             <span class="tag">A/B Testing</span>
             <span class="tag">Behavioral Analytics</span>
             <span class="tag">Decision Science</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://github.com/j-ai-616/ecommerce_ab_test_project" target="_blank">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card span-12">
+          <div class="project-title">
+            <h3>Employee Attrition EDA: Understanding a Company Pain Point</h3>
+            <small>EDA · HR Analytics · Business Problem Framing</small>
+          </div>
+
+          <p class="tagline">
+            An exploratory data analysis project examining employee attrition as a company pain point
+            and translating descriptive patterns into business questions.
+          </p>
+
+          <ul>
+            <li>Explored employee attrition data to identify potential patterns related to turnover risk.</li>
+            <li>Focused on EDA as a problem-framing process before predictive modeling.</li>
+            <li>Connected workforce data patterns with organizational decision-making and retention strategy.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">EDA</span>
+            <span class="tag">HR Analytics</span>
+            <span class="tag">Company Pain Point</span>
+            <span class="tag">Organizational Data</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://github.com/j-ai-616/eda_report" target="_blank">GitHub</a>
           </div>
         </article>
 
@@ -354,16 +494,19 @@
             <h3>Master’s Thesis: Life Satisfaction among Middle-Aged and Older Retirees</h3>
             <small>Quantitative Sociology · Panel Data · Stata</small>
           </div>
+
           <p class="tagline">
             A sociological study using Korean panel data to examine factors associated with life
             satisfaction among retirees.
           </p>
+
           <ul>
             <li>Used KLoSA panel data to analyze the life satisfaction of middle-aged and older retirees.</li>
             <li>Examined both objective and subjective predictors, including socioeconomic status, perceived social class, and self-rated health.</li>
             <li>Found that subjective indicators explained life satisfaction more strongly than many objective measures.</li>
             <li>Developed a long-term research interest in how subjective experience can be operationalized and analyzed through data.</li>
           </ul>
+
           <div class="tags">
             <span class="tag">Sociology</span>
             <span class="tag">Panel Data</span>
@@ -375,49 +518,123 @@
       </div>
     </section>
 
-    <section>
-      <h2>Emerging Research Ideas</h2>
+    <section id="eda">
+      <h2>Exploratory Data Analysis & Research Insights</h2>
+
+      <div class="card span-12">
+        <p>
+          Across my projects, EDA is treated not merely as a preliminary step, but as a process
+          for identifying behavioral patterns, refining research questions, detecting data limitations,
+          and designing appropriate modeling strategies.
+        </p>
+
+        <ul>
+          <li>Identified churn-related behavioral signals before predictive modeling.</li>
+          <li>Explored movie review and app review patterns to understand audience experience, UX pain points, and cultural responses.</li>
+          <li>Analyzed funnel drop-offs in e-commerce behavioral logs to inform A/B test design.</li>
+          <li>Used visualization and descriptive statistics to connect technical findings with human-centered interpretation.</li>
+        </ul>
+
+        <p class="note">
+          In my research direction, EDA functions as a bridge between data science and cultural interpretation:
+          a way to read behavioral traces, platform interactions, and user experience before formal modeling.
+        </p>
+      </div>
+    </section>
+
+    <section id="books">
+      <h2>Books & Writing Projects</h2>
+
       <div class="grid">
 
-        <div class="card span-6">
-          <h3>Algorithmic Recommendation vs. Human Curation</h3>
-          <p>
-            I am interested in comparing platform-based movie recommendation outputs with
-            human-curated film recommendations from critics, creators, and social media communities.
-            This project aims to examine overlap, diversity, emotional resonance, and cultural
-            relevance between algorithmic and human recommendation systems.
+        <article class="card span-4">
+          <h3>Statistics with Social Science Data</h3>
+          <p class="tagline">
+            A Korean-language educational book introducing statistical thinking,
+            social science data analysis, and applied quantitative research workflows.
           </p>
           <div class="tags">
-            <span class="tag">Netflix</span>
-            <span class="tag">Film Recommendation</span>
-            <span class="tag">Human Curation</span>
-            <span class="tag">Cultural Discovery</span>
+            <span class="tag">Statistics</span>
+            <span class="tag">Social Science</span>
+            <span class="tag">Stata</span>
+            <span class="tag">Research Education</span>
           </div>
-        </div>
+          <div class="actions">
+            <a class="btn" href="https://wikidocs.net/book/19517" target="_blank">WikiDocs</a>
+          </div>
+        </article>
 
-        <div class="card span-6">
-          <h3>AI-Mediated Film and Music Experience</h3>
-          <p>
-            Beyond accuracy and engagement, I aim to study whether AI systems can support
-            meaningful rediscovery of films, music, and cultural works across different life stages.
-            This line of inquiry connects recommender systems with memory, emotion, taste formation,
-            and cultural identity.
+        <article class="card span-4">
+          <h3>60 Core Concepts in Machine Learning & Deep Learning</h3>
+          <p class="tagline">
+            A beginner-oriented conceptual guide to machine learning and deep learning,
+            designed to explain technical ideas in accessible language.
           </p>
           <div class="tags">
-            <span class="tag">Film</span>
-            <span class="tag">Music</span>
-            <span class="tag">Emotion</span>
-            <span class="tag">Affective Experience</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">AI Education</span>
+            <span class="tag">Technical Communication</span>
           </div>
-        </div>
+          <div class="actions">
+            <a class="btn" href="https://wikidocs.net/book/19555" target="_blank">WikiDocs</a>
+          </div>
+        </article>
+
+        <article class="card span-4">
+          <h3>Technical Documentation on SaaS Churn Prediction</h3>
+          <p class="tagline">
+            A project-based technical book documenting the full pipeline from EDA,
+            preprocessing, ML/DL modeling, XAI interpretation, and Streamlit deployment.
+          </p>
+          <div class="tags">
+            <span class="tag">XAI</span>
+            <span class="tag">Churn Prediction</span>
+            <span class="tag">Technical Writing</span>
+            <span class="tag">Applied AI</span>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://wikidocs.net/book/19571" target="_blank">WikiDocs</a>
+          </div>
+        </article>
 
       </div>
     </section>
 
-    <section>
-      <h2>Academic & Technical Background</h2>
-      <div class="grid">
+    <section id="future-research">
+      <h2>Future Research Direction</h2>
 
+      <div class="card span-12">
+        <p>
+          My future research aims to explore how AI-mediated recommendation systems
+          influence cultural discovery, emotional experience, and user decision-making
+          in digital media environments.
+        </p>
+
+        <p>
+          I am particularly interested in comparing algorithmic recommendation mechanisms
+          with human-centered forms of cultural curation, focusing on diversity,
+          interpretability, emotional resonance, and long-term user value.
+        </p>
+
+        <p>
+          This direction connects recommender systems, cultural analytics,
+          human-centered AI, HCI, and platform studies.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Recommender Systems</span>
+          <span class="tag">Cultural Discovery</span>
+          <span class="tag">Human Curation</span>
+          <span class="tag">Human-Centered AI</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Academic & Technical Background</h2>
+
+      <div class="grid">
         <div class="card span-6">
           <h3>Education</h3>
           <ul>
@@ -438,23 +655,25 @@
             <li><strong>Visualization & Apps:</strong> Matplotlib, Streamlit, dashboard development</li>
           </ul>
         </div>
-
       </div>
     </section>
 
-    <section>
+    <section id="why-cultural-technology">
       <h2>Why Cultural Technology?</h2>
+
       <div class="card span-12">
         <p>
           My intellectual path has been shaped by both cultural curiosity and analytical training.
           Since adolescence, I have been deeply engaged with films and music, not only as entertainment
           but as cultural experiences that shape emotion, memory, identity, and social imagination.
         </p>
+
         <p>
           Through sociology, I learned to ask how individuals are shaped by structures, institutions,
           and cultural contexts. Through data science and AI projects, I learned how large-scale
           behavioral traces can be modeled, interpreted, and translated into decisions.
         </p>
+
         <p>
           Cultural Technology is the field where these paths converge. I hope to study AI not merely
           as a technical system, but as a cultural infrastructure that increasingly mediates what people
@@ -463,20 +682,35 @@
       </div>
     </section>
 
-    <section>
+    <section id="links">
       <h2>Links</h2>
+
       <div class="grid">
         <div class="card span-4">
           <h3>GitHub</h3>
-          <p><a href="#" target="_blank">Add GitHub profile link</a></p>
+          <p>
+            <a href="https://github.com/j-ai-616" target="_blank">
+              github.com/j-ai-616
+            </a>
+          </p>
         </div>
+
         <div class="card span-4">
-          <h3>Research Portfolio PDF</h3>
-          <p><a href="#" target="_blank">Add PDF link</a></p>
+          <h3>Portfolio</h3>
+          <p>
+            <a href="https://j-ai-616.github.io/portfolio/" target="_blank">
+              j-ai-616.github.io/portfolio
+            </a>
+          </p>
         </div>
+
         <div class="card span-4">
           <h3>Contact</h3>
-          <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+          <p>
+            <a href="mailto:yjson616@gmail.com">
+              yjson616@gmail.com
+            </a>
+          </p>
         </div>
       </div>
     </section>
