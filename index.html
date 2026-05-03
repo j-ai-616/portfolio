@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ji-Eun Son | Business, Data & AI Portfolio</title>
+  <title>Ji-Eun Son | Cultural Technology & Human-Centered AI Portfolio</title>
   <style>
     :root {
       --bg: #f7f7f4;
@@ -24,228 +24,190 @@
       font-family: Aptos, Arial, sans-serif;
       background: var(--bg);
       color: var(--ink);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .container {
       width: min(1080px, 92%);
       margin: 0 auto;
+      padding: 48px 0;
     }
 
     header {
-      padding: 72px 0 48px;
+      padding: 72px 0 56px;
       border-bottom: 1px solid var(--line);
     }
 
     .eyebrow {
       color: var(--accent);
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       margin-bottom: 16px;
     }
 
     h1 {
-      font-size: clamp(2.4rem, 5vw, 4.6rem);
-      line-height: 1.05;
-      margin: 0 0 22px;
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.08;
+      margin: 0 0 20px;
       letter-spacing: -0.04em;
     }
 
-    .lead {
-      max-width: 820px;
-      color: var(--muted);
-      font-size: 1.08rem;
-      margin: 0;
-    }
-
-    .meta {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .pill {
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: 999px;
-      padding: 8px 13px;
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    section {
-      padding: 46px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-title {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-
     h2 {
-      margin: 0;
-      font-size: 1.55rem;
+      font-size: 1.8rem;
+      margin: 0 0 22px;
       letter-spacing: -0.02em;
     }
 
-    .section-note {
+    h3 {
+      font-size: 1.18rem;
+      margin: 0 0 10px;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    .lead {
+      font-size: 1.18rem;
       color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0;
-      max-width: 580px;
+      max-width: 820px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .meta span {
+      background: var(--accent-soft);
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    section {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--line);
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      gap: 18px;
+      gap: 22px;
     }
 
     .card {
       background: var(--card);
       border: 1px solid var(--line);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(31, 41, 51, 0.05);
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(31, 41, 51, 0.04);
     }
 
-    .span-6 { grid-column: span 6; }
-    .span-4 { grid-column: span 4; }
-    .span-12 { grid-column: span 12; }
+    .span-4 {
+      grid-column: span 4;
+    }
 
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 1.18rem;
-      letter-spacing: -0.01em;
+    .span-6 {
+      grid-column: span 6;
+    }
+
+    .span-8 {
+      grid-column: span 8;
+    }
+
+    .span-12 {
+      grid-column: span 12;
     }
 
     .tagline {
-      color: var(--accent);
-      font-weight: 700;
-      margin: 0 0 14px;
-      font-size: 0.95rem;
-    }
-
-    .card p {
       color: var(--muted);
-      margin: 0 0 14px;
+      font-size: 0.98rem;
     }
 
-    .bullets {
-      margin: 14px 0 18px;
-      padding-left: 18px;
-      color: var(--muted);
-    }
-
-    .bullets li {
-      margin-bottom: 6px;
-    }
-
-    .chips {
+    .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 16px;
     }
 
-    .chip {
-      background: var(--accent-soft);
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 6px 10px;
+    .tag {
       font-size: 0.82rem;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 9px;
+      border-radius: 999px;
       font-weight: 600;
     }
 
-    .actions {
+    ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .project-title {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: baseline;
+      margin-bottom: 8px;
     }
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid var(--accent);
-      color: var(--accent);
-      border-radius: 999px;
-      padding: 8px 13px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .button.primary {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    .button.primary:hover {
-      opacity: 0.88;
-    }
-
-    .profile {
-      display: grid;
-      grid-template-columns: 1.4fr 0.8fr;
-      gap: 18px;
+    .project-title small {
+      color: var(--muted);
+      white-space: nowrap;
     }
 
     .quote {
-      background: var(--accent);
-      color: #fff;
-      border-radius: 20px;
-      padding: 28px;
-    }
-
-    .quote p {
-      margin: 0;
-      font-size: 1.15rem;
+      font-size: 1.25rem;
       line-height: 1.55;
+      color: var(--ink);
+      border-left: 4px solid var(--accent);
+      padding-left: 18px;
+      margin-top: 12px;
     }
 
     footer {
-      padding: 36px 0 56px;
+      padding: 42px 0 54px;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
-    @media (max-width: 820px) {
-      .span-6, .span-4, .span-12 {
+    @media (max-width: 800px) {
+      .span-4,
+      .span-6,
+      .span-8,
+      .span-12 {
         grid-column: span 12;
-      }
-
-      .profile {
-        grid-template-columns: 1fr;
       }
 
       header {
         padding-top: 48px;
       }
 
-      .section-title {
-        display: block;
-      }
-
-      .section-note {
-        margin-top: 8px;
+      .project-title {
+        flex-direction: column;
+        gap: 2px;
       }
     }
   </style>
@@ -254,407 +216,277 @@
 <body>
   <header>
     <div class="container">
-      <div class="eyebrow">Business · Data · AI Portfolio</div>
+      <div class="eyebrow">Cultural Technology · Human-Centered AI · Computational Social Science</div>
       <h1>Ji-Eun Son</h1>
       <p class="lead">
-        Project management and business operations professional with experience in enterprise IT consulting,
-        SI project coordination, business planning, and data-driven problem solving. This portfolio reorganizes
-        selected projects and publications around one theme: improving decisions, operations, and user experience
-        through structured execution and analytical thinking.
+        Interdisciplinary researcher interested in how AI systems shape cultural consumption,
+        human experience, and digital platform behavior, with a background in sociology,
+        management, data analysis, and applied AI projects.
       </p>
+
       <div class="meta">
-        <span class="pill">Project Management</span>
-        <span class="pill">Process Improvement</span>
-        <span class="pill">Python · SQL · Stata</span>
-        <span class="pill">Machine Learning</span>
-        <span class="pill">Text Analytics</span>
-        <span class="pill">Business Communication</span>
+        <span>M.A. in Social & Cultural Studies, Yonsei University</span>
+        <span>B.A. in Management, Academic Credit Bank System</span>
+        <span>Science-track background through secondary education</span>
+        <span>Python · SQL · Stata · Machine Learning · NLP</span>
       </div>
     </div>
   </header>
 
-  <main>
+  <main class="container">
+
     <section>
-      <div class="container profile">
-        <div class="card">
-          <h2>Portfolio Positioning</h2>
+      <h2>Research Direction</h2>
+      <div class="grid">
+        <div class="card span-8">
           <p>
-            My work sits at the intersection of project execution, business analysis, and applied AI.
-            Rather than presenting code repositories as isolated outputs, this portfolio highlights how each
-            project connects to operational improvement, customer insight, decision support, and service design.
+            My research interest lies at the intersection of AI, cultural technology,
+            human-centered design, and computational social science. I am particularly interested
+            in how recommendation algorithms, digital platforms, and generative AI systems influence
+            cultural discovery, taste formation, emotional experience, and user decision-making.
           </p>
-          <ul class="bullets">
-            <li><strong>Execution:</strong> Coordinating schedules, issues, stakeholders, and deliverables in complex project environments.</li>
-            <li><strong>Analysis:</strong> Using data, text, and behavioral signals to understand customer or user patterns.</li>
-            <li><strong>Communication:</strong> Translating technical work into business-facing explanations and action plans.</li>
+          <p>
+            Drawing on my background in sociology and applied data science, I aim to study not only
+            whether AI systems perform well technically, but also how they reshape the way people
+            encounter films, music, media content, services, and cultural meaning.
+          </p>
+          <div class="quote">
+            How can AI systems recommend not only what users are likely to click,
+            but what may become meaningful in their cultural and emotional lives?
+          </div>
+        </div>
+
+        <div class="card span-4">
+          <h3>Research Interests</h3>
+          <ul>
+            <li>Human-Centered AI</li>
+            <li>Cultural Technology</li>
+            <li>Recommender Systems</li>
+            <li>AI-Mediated Film & Music Experiences</li>
+            <li>Computational Social Science</li>
+            <li>Digital Platform Behavior</li>
+            <li>Explainable AI</li>
+            <li>HCI & Affective Interaction</li>
           </ul>
         </div>
-        <div class="quote">
-          <p>
-            “I solve operational and business problems through structured execution, data-driven thinking,
-            and clear communication.”
-          </p>
-        </div>
       </div>
     </section>
 
     <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Featured Business & Analytics Projects</h2>
-          <p class="section-note">
-            Four core projects showing prediction, customer insight, exploratory analysis, and experiment-based decision making.
-          </p>
-        </div>
+      <h2>Selected Projects</h2>
 
-        <div class="grid">
-          <article class="card span-6">
-            <h3>RavenStack SaaS Churn Prediction & Retention Strategy</h3>
-            <p class="tagline">Machine learning · Explainable AI · Business action planning</p>
-            <p>
-              Built an end-to-end churn prediction project using a synthetic SaaS subscription dataset.
-              The project connects data preprocessing, feature engineering, model comparison, threshold tuning,
-              explainability, and retention strategy into a business-facing analytics workflow.
-            </p>
-            <ul class="bullets">
-              <li>Designed account-level churn prediction logic and avoided leakage from churn-event data.</li>
-              <li>Compared machine learning and deep learning models with operational threshold interpretation.</li>
-              <li>Used explainable AI to translate model signals into retention actions.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">Churn Prediction</span>
-              <span class="chip">XAI</span>
-              <span class="chip">Streamlit</span>
-              <span class="chip">Retention Strategy</span>
-            </div>
-            <div class="actions">
-              <a class="button primary" href="https://github.com/j-ai-616/RavenStack_Churn_Project" target="_blank">View Project</a>
-            </div>
-          </article>
-
-          <article class="card span-6">
-            <h3>CGV Review Crawling & Text Analytics</h3>
-            <p class="tagline">Large-scale review crawling · NLP · Customer experience insight</p>
-            <p>
-              Collected and analyzed approximately 50,000 CGV movie reviews to identify customer sentiment,
-              recurring topics, and user experience patterns. The project demonstrates the ability to turn
-              large-scale unstructured feedback into structured insight.
-            </p>
-            <ul class="bullets">
-              <li>Built a review collection and preprocessing workflow for Korean text data.</li>
-              <li>Applied sentiment and topic-oriented analysis to understand audience response patterns.</li>
-              <li>Reframed movie review data as customer feedback for service and experience improvement.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">Web Crawling</span>
-              <span class="chip">Text Mining</span>
-              <span class="chip">NLP</span>
-              <span class="chip">Customer Insight</span>
-            </div>
-            <div class="actions">
-              <a class="button primary" href="https://github.com/j-ai-616/cgv-review-pilot-analysis" target="_blank">View Project</a>
-            </div>
-          </article>
-
-          <article class="card span-6">
-            <h3>Employee Attrition EDA Report</h3>
-            <p class="tagline">HR analytics · Company pain point analysis · Exploratory data analysis</p>
-            <p>
-              An exploratory data analysis project using IBM HR data to understand employee attrition,
-              a critical pain point for companies because it can increase hiring and training costs,
-              disrupt workforce continuity, and weaken organizational stability.
-            </p>
-            <ul class="bullets">
-              <li>Analyzed attrition patterns across overtime, income, tenure, job role, work-life balance, and job satisfaction.</li>
-              <li>Identified higher attrition risk among overtime workers and selected job groups.</li>
-              <li>Translated EDA findings into HR-oriented insights for employee retention and workforce stability.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">HR Analytics</span>
-              <span class="chip">Employee Attrition</span>
-              <span class="chip">Company Pain Point</span>
-              <span class="chip">Retention Insight</span>
-            </div>
-            <div class="actions">
-              <a class="button primary" href="https://github.com/j-ai-616/eda_report" target="_blank">View Project</a>
-            </div>
-          </article>
-
-          <article class="card span-6">
-            <h3>E-commerce Conversion A/B Test Project</h3>
-            <p class="tagline">Experiment design · Conversion uplift · Statistical testing</p>
-            <p>
-              Designed an e-commerce A/B testing project to compare conversion performance between two user groups.
-              The project focuses on KPI definition, uplift measurement, statistical significance, confidence intervals,
-              and business implications for growth optimization.
-            </p>
-            <ul class="bullets">
-              <li>Structured an experiment framework around conversion, add-to-cart, and revenue-related metrics.</li>
-              <li>Applied hypothesis testing to evaluate whether observed uplift is statistically meaningful.</li>
-              <li>Translated statistical results into decision-oriented recommendations.</li>
-            </ul>
-            <div class="chips">
-              <span class="chip">A/B Test</span>
-              <span class="chip">Conversion Rate</span>
-              <span class="chip">Hypothesis Testing</span>
-              <span class="chip">Growth Analytics</span>
-            </div>
-            <div class="actions">
-              <a class="button primary" href="https://github.com/j-ai-616/ecommerce_ab_test_project" target="_blank">View Project</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Supporting Projects & Applications</h2>
-          <p class="section-note">
-            Additional personal projects showing practical implementation, service thinking, and user-facing application ideas.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card span-4">
-            <h3>Restaurant Data Project</h3>
-            <p class="tagline">Data handling · Service-oriented analysis</p>
-            <p>
-              A personal project focused on organizing and analyzing restaurant-related data.
-              It reflects early practice in structuring real-world information into an analyzable format.
-            </p>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">Data Cleaning</span>
-              <span class="chip">Service Data</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://github.com/j-ai-616/MyProject01_restaurants" target="_blank">View Project</a>
-            </div>
-          </article>
-
-          <article class="card span-4">
-            <h3>TOEIC Vocabulary Learning Project</h3>
-            <p class="tagline">Learning service · Data organization · Utility design</p>
-            <p>
-              A learning-support project that organizes vocabulary content into a usable structure.
-              The project reflects interest in educational technology, content structure, and practical user utility.
-            </p>
-            <div class="chips">
-              <span class="chip">Learning Tool</span>
-              <span class="chip">Content Design</span>
-              <span class="chip">Python</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://github.com/j-ai-616/MyProject02_toeic_voca" target="_blank">View Project</a>
-            </div>
-          </article>
-
-          <article class="card span-4">
-            <h3>MBTI Compatibility Project</h3>
-            <p class="tagline">Interactive service concept · User-facing logic</p>
-            <p>
-              A small user-facing project built around MBTI compatibility logic.
-              It demonstrates practice in translating simple behavioral or preference-based rules into an interactive application idea.
-            </p>
-            <div class="chips">
-              <span class="chip">User Interaction</span>
-              <span class="chip">Rule-based Logic</span>
-              <span class="chip">Service Concept</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://github.com/j-ai-616/MyProject03_MBTI_gunghab" target="_blank">View Project</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Team Projects</h2>
-          <p class="section-note">
-            Team-based execution experience from SK Networks Family AI Camp.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card span-6">
-            <h3>SKN28 1st Team Project</h3>
-            <p class="tagline">Team execution · Planning · Implementation</p>
-            <p>
-              A team project developed during the SK Networks Family AI Camp. The work reflects collaborative planning,
-              role coordination, implementation, and presentation-oriented delivery.
-            </p>
-            <div class="chips">
-              <span class="chip">Team Project</span>
-              <span class="chip">AI Camp</span>
-              <span class="chip">Execution</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN28-1st-3TEAM" target="_blank">View Project</a>
-            </div>
-          </article>
-
-          <article class="card span-6">
-            <h3>SKN28 2nd Team Project</h3>
-            <p class="tagline">Applied AI · Data analysis · Business presentation</p>
-            <p>
-              A second team-based AI/data project emphasizing applied analysis, implementation, and business-facing communication.
-              This project strengthened the connection between technical output and decision-oriented explanation.
-            </p>
-            <div class="chips">
-              <span class="chip">Applied AI</span>
-              <span class="chip">Business Analytics</span>
-              <span class="chip">Collaboration</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://github.com/SKNETWORKS-FAMILY-AICAMP/SKN28-2nd-3Team" target="_blank">View Project</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Research Foundation</h2>
-          <p class="section-note">
-            Graduate-level quantitative research experience that shaped my analytical perspective.
-          </p>
-        </div>
+      <div class="grid">
 
         <article class="card span-12">
-          <h3>Master’s Thesis: Life Satisfaction of Middle- and Older-Aged Retirees</h3>
-          <p class="tagline">Yonsei University · Panel regression · KLoSA longitudinal data · Stata</p>
-          <p>
-            For my master's thesis at Yonsei University, I analyzed the determinants of life satisfaction
-            among middle-aged and older retirees using panel regression with KLoSA longitudinal data.
-            A key finding was that subjective indicators — perceived social class and self-rated health —
-            carried greater explanatory power than objective measures, which deepened my conviction that
-            human perception and affect must be treated as substantive analytical constructs.
+          <div class="project-title">
+            <h3>AI-Based SaaS Churn Prediction & Retention Strategy</h3>
+            <small>Machine Learning · XAI · Streamlit</small>
+          </div>
+          <p class="tagline">
+            An explainable AI project for predicting customer churn and translating model outputs
+            into actionable retention strategies.
           </p>
-          <div class="chips">
-            <span class="chip">Panel Regression</span>
-            <span class="chip">KLoSA</span>
-            <span class="chip">Stata</span>
-            <span class="chip">Life Satisfaction</span>
-            <span class="chip">Subjective Indicators</span>
-            <span class="chip">Social Data</span>
+          <ul>
+            <li>Built an account-level churn prediction pipeline using subscription, feature usage, support ticket, and account data.</li>
+            <li>Excluded churn event records from model features to prevent data leakage and used them for post-hoc interpretation.</li>
+            <li>Engineered behavioral and operational features such as active subscription ratio, error rate, support response time, days since last usage, and recent upgrade/downgrade flags.</li>
+            <li>Compared machine learning and deep learning models, tuned the operational threshold, and used SHAP for global and local explanation.</li>
+            <li>Developed a Streamlit dashboard to communicate churn risk, model reasoning, and retention actions.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Explainable AI</span>
+            <span class="tag">Customer Behavior</span>
+            <span class="tag">Predictive Modeling</span>
+            <span class="tag">Human Decision Support</span>
           </div>
         </article>
+
+        <article class="card span-12">
+          <div class="project-title">
+            <h3>Smart Home App Review Analytics</h3>
+            <small>NLP · BERTopic · UX Analytics</small>
+          </div>
+          <p class="tagline">
+            A computational analysis project examining how users experience smart home ecosystems
+            through app reviews, update contexts, and platform-specific feedback.
+          </p>
+          <ul>
+            <li>Collected large-scale user reviews from smart home apps such as LG ThinQ and Samsung SmartThings.</li>
+            <li>Designed a pipeline for preprocessing, embedding, topic modeling, sentiment analysis, and temporal interpretation.</li>
+            <li>Used BERTopic to identify recurring UX concerns, ecosystem integration issues, emotional responses, and service pain points.</li>
+            <li>Explored how app updates may reshape user experience and perceived platform reliability over time.</li>
+            <li>Positioned app review data as a cultural and behavioral trace of human-technology interaction.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Cultural Data Analytics</span>
+            <span class="tag">User Experience</span>
+            <span class="tag">Smart Home</span>
+            <span class="tag">Topic Modeling</span>
+            <span class="tag">Platform Studies</span>
+          </div>
+        </article>
+
+        <article class="card span-12">
+          <div class="project-title">
+            <h3>E-commerce Behavioral Analytics & A/B Test Simulation</h3>
+            <small>Funnel Analysis · Experiment Design · Statistics</small>
+          </div>
+          <p class="tagline">
+            A behavioral analytics project identifying conversion bottlenecks and designing an
+            experiment-based strategy for improving purchase conversion.
+          </p>
+          <ul>
+            <li>Analyzed large-scale e-commerce behavioral log data to understand user journeys from view to cart to purchase.</li>
+            <li>Identified funnel drop-offs and product/category-level patterns in user behavior.</li>
+            <li>Designed an A/B test simulation framework to evaluate potential conversion improvement strategies.</li>
+            <li>Translated behavioral data into business recommendations for product and growth decision-making.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Digital Platform Behavior</span>
+            <span class="tag">A/B Testing</span>
+            <span class="tag">Behavioral Analytics</span>
+            <span class="tag">Decision Science</span>
+          </div>
+        </article>
+
+        <article class="card span-12">
+          <div class="project-title">
+            <h3>Master’s Thesis: Life Satisfaction among Middle-Aged and Older Retirees</h3>
+            <small>Quantitative Sociology · Panel Data · Stata</small>
+          </div>
+          <p class="tagline">
+            A sociological study using Korean panel data to examine factors associated with life
+            satisfaction among retirees.
+          </p>
+          <ul>
+            <li>Used KLoSA panel data to analyze the life satisfaction of middle-aged and older retirees.</li>
+            <li>Examined both objective and subjective predictors, including socioeconomic status, perceived social class, and self-rated health.</li>
+            <li>Found that subjective indicators explained life satisfaction more strongly than many objective measures.</li>
+            <li>Developed a long-term research interest in how subjective experience can be operationalized and analyzed through data.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Sociology</span>
+            <span class="tag">Panel Data</span>
+            <span class="tag">Subjective Well-being</span>
+            <span class="tag">Quantitative Research</span>
+          </div>
+        </article>
+
       </div>
     </section>
 
     <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>Publications & Knowledge Projects</h2>
-          <p class="section-note">
-            Long-form knowledge production through WikiDocs. These books demonstrate documentation ability,
-            conceptual structuring, and the capacity to explain technical topics to learners.
+      <h2>Emerging Research Ideas</h2>
+      <div class="grid">
+
+        <div class="card span-6">
+          <h3>Algorithmic Recommendation vs. Human Curation</h3>
+          <p>
+            I am interested in comparing platform-based movie recommendation outputs with
+            human-curated film recommendations from critics, creators, and social media communities.
+            This project aims to examine overlap, diversity, emotional resonance, and cultural
+            relevance between algorithmic and human recommendation systems.
           </p>
+          <div class="tags">
+            <span class="tag">Netflix</span>
+            <span class="tag">Film Recommendation</span>
+            <span class="tag">Human Curation</span>
+            <span class="tag">Cultural Discovery</span>
+          </div>
         </div>
 
-        <div class="grid">
-          <article class="card span-4">
-            <h3>Machine Learning & Deep Learning Concepts</h3>
-            <p class="tagline">Beginner-friendly AI knowledge structuring</p>
-            <p>
-              A conceptual book project explaining core machine learning and deep learning ideas in an accessible,
-              structured format for beginners.
-            </p>
-            <div class="chips">
-              <span class="chip">ML/DL</span>
-              <span class="chip">Education</span>
-              <span class="chip">Technical Writing</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://wikidocs.net/book/19571" target="_blank">View Book</a>
-            </div>
-          </article>
-
-          <article class="card span-4">
-            <h3>Social Science Data & Statistics</h3>
-            <p class="tagline">Statistics · Social data · Empirical thinking</p>
-            <p>
-              A statistics and data analysis book project connecting social science questions with empirical
-              data workflows and quantitative reasoning.
-            </p>
-            <div class="chips">
-              <span class="chip">Statistics</span>
-              <span class="chip">Social Data</span>
-              <span class="chip">Research</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://wikidocs.net/book/19555" target="_blank">View Book</a>
-            </div>
-          </article>
-
-          <article class="card span-4">
-            <h3>SaaS Churn Project Technical Manual</h3>
-            <p class="tagline">Project documentation · XAI · Action planning</p>
-            <p>
-              A technical manual documenting the full SaaS churn analysis workflow from EDA and preprocessing
-              to modeling, explainability, dashboarding, and retention strategy.
-            </p>
-            <div class="chips">
-              <span class="chip">Churn</span>
-              <span class="chip">XAI</span>
-              <span class="chip">Documentation</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="https://wikidocs.net/book/19517" target="_blank">View Book</a>
-            </div>
-          </article>
+        <div class="card span-6">
+          <h3>AI-Mediated Film and Music Experience</h3>
+          <p>
+            Beyond accuracy and engagement, I aim to study whether AI systems can support
+            meaningful rediscovery of films, music, and cultural works across different life stages.
+            This line of inquiry connects recommender systems with memory, emotion, taste formation,
+            and cultural identity.
+          </p>
+          <div class="tags">
+            <span class="tag">Film</span>
+            <span class="tag">Music</span>
+            <span class="tag">Emotion</span>
+            <span class="tag">Affective Experience</span>
+          </div>
         </div>
+
       </div>
     </section>
 
     <section>
-      <div class="container">
-        <div class="section-title">
-          <h2>How This Portfolio Connects to PM Work</h2>
-          <p class="section-note">
-            The projects are grouped by the type of business capability they demonstrate.
-          </p>
+      <h2>Academic & Technical Background</h2>
+      <div class="grid">
+
+        <div class="card span-6">
+          <h3>Education</h3>
+          <ul>
+            <li><strong>M.A. in Social & Cultural Studies</strong>, Graduate School of Public Administration, Yonsei University</li>
+            <li><strong>B.A. in Management</strong>, Academic Credit Bank System</li>
+            <li>Science-track background through secondary education</li>
+            <li>International experience in Australia, Mexico, and France prior to undergraduate study</li>
+          </ul>
         </div>
 
-        <div class="grid">
-          <div class="card span-4">
-            <h3>Operational Thinking</h3>
-            <p>
-              PMO and consulting experience trained me to manage schedules, issues, risks, dependencies,
-              deliverables, and cross-functional communication.
-            </p>
-          </div>
-          <div class="card span-4">
-            <h3>Data-Driven Analysis</h3>
-            <p>
-              Analytics projects demonstrate the ability to structure data, build models, interpret patterns,
-              and translate outputs into decisions.
-            </p>
-          </div>
-          <div class="card span-4">
-            <h3>Business Communication</h3>
-            <p>
-              WikiDocs and portfolio writing show the ability to document complex workflows and explain technical
-              topics clearly to non-technical audiences.
-            </p>
-          </div>
+        <div class="card span-6">
+          <h3>Technical Skills</h3>
+          <ul>
+            <li><strong>Programming:</strong> Python, SQL</li>
+            <li><strong>Statistics:</strong> Stata, regression analysis, panel data analysis</li>
+            <li><strong>Machine Learning:</strong> scikit-learn, XGBoost, LightGBM, PyTorch</li>
+            <li><strong>NLP:</strong> text preprocessing, sentiment analysis, BERTopic, embeddings</li>
+            <li><strong>Visualization & Apps:</strong> Matplotlib, Streamlit, dashboard development</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Why Cultural Technology?</h2>
+      <div class="card span-12">
+        <p>
+          My intellectual path has been shaped by both cultural curiosity and analytical training.
+          Since adolescence, I have been deeply engaged with films and music, not only as entertainment
+          but as cultural experiences that shape emotion, memory, identity, and social imagination.
+        </p>
+        <p>
+          Through sociology, I learned to ask how individuals are shaped by structures, institutions,
+          and cultural contexts. Through data science and AI projects, I learned how large-scale
+          behavioral traces can be modeled, interpreted, and translated into decisions.
+        </p>
+        <p>
+          Cultural Technology is the field where these paths converge. I hope to study AI not merely
+          as a technical system, but as a cultural infrastructure that increasingly mediates what people
+          watch, listen to, remember, desire, and value.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <div class="grid">
+        <div class="card span-4">
+          <h3>GitHub</h3>
+          <p><a href="#" target="_blank">Add GitHub profile link</a></p>
+        </div>
+        <div class="card span-4">
+          <h3>Research Portfolio PDF</h3>
+          <p><a href="#" target="_blank">Add PDF link</a></p>
+        </div>
+        <div class="card span-4">
+          <h3>Contact</h3>
+          <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="container">
-      <p>
-        © 2026 Ji-Eun Son · Portfolio for business, data, AI, and project management roles.
-      </p>
+      © 2026 Ji-Eun Son. Portfolio for graduate research opportunities in Cultural Technology,
+      Human-Centered AI, and Computational Social Science.
     </div>
   </footer>
 </body>
