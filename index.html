@@ -18,13 +18,9 @@
       --shadow: rgba(31, 41, 51, 0.06);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -40,9 +36,7 @@
       font-weight: 700;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    a:hover { text-decoration: underline; }
 
     .container {
       width: min(1080px, 92%);
@@ -82,18 +76,14 @@
       margin: 0 0 10px;
     }
 
-    p {
-      margin: 0 0 16px;
-    }
+    p { margin: 0 0 16px; }
 
     ul {
       margin: 12px 0 0;
       padding-left: 20px;
     }
 
-    li {
-      margin-bottom: 8px;
-    }
+    li { margin-bottom: 8px; }
 
     .lead {
       font-size: 1.18rem;
@@ -116,18 +106,6 @@
       border-radius: 999px;
     }
 
-    .top-actions,
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .top-actions {
-      margin-top: 28px;
-    }
-
     section {
       padding: 48px 0;
       border-bottom: 1px solid var(--line);
@@ -147,21 +125,10 @@
       box-shadow: 0 10px 30px var(--shadow);
     }
 
-    .span-4 {
-      grid-column: span 4;
-    }
-
-    .span-6 {
-      grid-column: span 6;
-    }
-
-    .span-8 {
-      grid-column: span 8;
-    }
-
-    .span-12 {
-      grid-column: span 12;
-    }
+    .span-4 { grid-column: span 4; }
+    .span-6 { grid-column: span 6; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
 
     .tagline {
       color: var(--muted);
@@ -182,6 +149,14 @@
       padding: 6px 9px;
       border-radius: 999px;
       font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
     }
 
     .btn {
@@ -247,13 +222,15 @@
         grid-column: span 12;
       }
 
-      header {
-        padding-top: 48px;
-      }
+      header { padding-top: 48px; }
 
       .project-title {
         flex-direction: column;
         gap: 2px;
+      }
+
+      .actions {
+        justify-content: flex-start;
       }
     }
   </style>
@@ -275,16 +252,10 @@
       </p>
 
       <div class="meta">
-        <span>M.A. in Social & Cultural Studies, Yonsei University</span>
-        <span>B.A. in Management, Academic Credit Bank System</span>
+        <span>M.A. in Social & Cultural Studies</span>
+        <span>B.A. in Management</span>
         <span>Science-track background through secondary education</span>
         <span>Python · SQL · Stata · Machine Learning · NLP</span>
-      </div>
-
-      <div class="top-actions">
-        <a class="btn" href="https://github.com/j-ai-616" target="_blank">GitHub</a>
-        <a class="btn secondary" href="https://j-ai-616.github.io/portfolio/" target="_blank">Portfolio</a>
-        <a class="btn secondary" href="mailto:yjson616@gmail.com">Email</a>
       </div>
     </div>
   </header>
@@ -390,12 +361,6 @@
             <span class="tag">Smart Home</span>
             <span class="tag">Topic Modeling</span>
             <span class="tag">Platform Studies</span>
-          </div>
-
-          <div class="actions">
-            <a class="btn" href="#" target="_blank">GitHub</a>
-            <a class="btn secondary" href="#" target="_blank">Research Proposal</a>
-            <a class="btn secondary" href="#" target="_blank">Technical Write-up</a>
           </div>
         </article>
 
@@ -601,6 +566,53 @@
       </div>
     </section>
 
+    <section id="ongoing-submissions">
+      <h2>Ongoing Submissions & Creative Work</h2>
+
+      <div class="grid">
+        <article class="card span-4">
+          <h3>Stata-Based Research Competition Submission</h3>
+          <p class="tagline">
+            A quantitative data analysis submission using Stata, currently under review in 2026.
+          </p>
+          <div class="tags">
+            <span class="tag">Stata</span>
+            <span class="tag">Quantitative Analysis</span>
+            <span class="tag">Research Competition</span>
+            <span class="tag">Under Review</span>
+          </div>
+        </article>
+
+        <article class="card span-4">
+          <h3>National Integration Essay Competition Submission</h3>
+          <p class="tagline">
+            A Korean-language essay submission reflecting on social integration, generational understanding,
+            and the experiences of socially vulnerable groups, currently under review in 2026.
+          </p>
+          <div class="tags">
+            <span class="tag">Essay</span>
+            <span class="tag">Social Integration</span>
+            <span class="tag">Public Writing</span>
+            <span class="tag">Under Review</span>
+          </div>
+        </article>
+
+        <article class="card span-4">
+          <h3>Kakao Emoticon Set: “Soft Puppy Gyeol-i”</h3>
+          <p class="tagline">
+            A 32-piece Kakao emoticon character set, “Gyeol the Fluffy Puppy” submitted as a creative
+            character-based communication project in 2026.
+          </p>
+          <div class="tags">
+            <span class="tag">Character Design</span>
+            <span class="tag">Emoticon</span>
+            <span class="tag">Creative Communication</span>
+            <span class="tag">Kakao</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="future-research">
       <h2>Future Research Direction</h2>
 
@@ -638,8 +650,8 @@
         <div class="card span-6">
           <h3>Education</h3>
           <ul>
-            <li><strong>M.A. in Social & Cultural Studies</strong>, Graduate School of Public Administration, Yonsei University</li>
-            <li><strong>B.A. in Management</strong>, Academic Credit Bank System</li>
+            <li><strong>M.A. in Social & Cultural Studies</strong></li>
+            <li><strong>B.A. in Management</strong></li>
             <li>Science-track background through secondary education</li>
             <li>International experience in Australia, Mexico, and France prior to undergraduate study</li>
           </ul>
@@ -683,7 +695,7 @@
     </section>
 
     <section id="links">
-      <h2>Links</h2>
+      <h2>Contact</h2>
 
       <div class="grid">
         <div class="card span-4">
@@ -705,7 +717,7 @@
         </div>
 
         <div class="card span-4">
-          <h3>Contact</h3>
+          <h3>Email</h3>
           <p>
             <a href="mailto:yjson616@gmail.com">
               yjson616@gmail.com
