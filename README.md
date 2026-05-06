@@ -1,2 +1,2 @@
 # portfolio
-Ji-Eun Son's portfolio (2026)
+english academic portfolio (2026)
