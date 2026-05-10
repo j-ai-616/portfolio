@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Ji-Eun Son | Computational Anthropology & Digital Culture Research</title>
+  <title>Ji-Eun Son | Computational Social Science & Digital Humanities Research</title>
 
   <style>
     :root {
-      --bg: #f7f7f4;
-      --ink: #1f2933;
-      --muted: #5f6b76;
-      --line: #deded8;
+      --bg: #f6f7fb;
+      --ink: #1e2330;
+      --muted: #667085;
+      --line: #d9deea;
       --card: #ffffff;
-      --accent: #2f4f4f;
-      --accent-soft: #e7eeee;
-      --shadow: rgba(31, 41, 51, 0.06);
+      --accent: #4f46e5;
+      --accent-deep: #3730a3;
+      --accent-soft: #eef2ff;
+      --accent-light: #f4f3ff;
+      --shadow: rgba(30, 35, 48, 0.07);
     }
 
     * { box-sizing: border-box; }
@@ -46,10 +48,13 @@
     header {
       padding: 76px 0 58px;
       border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at top right, #e0e7ff 0%, transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
     }
 
     .eyebrow {
-      color: var(--accent);
+      color: var(--accent-deep);
       font-weight: 800;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -101,8 +106,10 @@
 
     .meta span {
       background: var(--accent-soft);
+      color: var(--accent-deep);
       padding: 8px 12px;
       border-radius: 999px;
+      font-weight: 700;
     }
 
     section {
@@ -124,6 +131,12 @@
       box-shadow: 0 10px 30px var(--shadow);
     }
 
+    .featured-card {
+      padding: 32px;
+      border: 1.5px solid var(--accent);
+      background: linear-gradient(180deg, #ffffff 0%, #f4f3ff 100%);
+    }
+
     .span-4 { grid-column: span 4; }
     .span-6 { grid-column: span 6; }
     .span-8 { grid-column: span 8; }
@@ -132,6 +145,19 @@
     .tagline {
       color: var(--muted);
       font-size: 0.98rem;
+    }
+
+    .featured-label {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .tags {
@@ -143,7 +169,7 @@
 
     .tag {
       font-size: 0.82rem;
-      color: var(--accent);
+      color: var(--accent-deep);
       background: var(--accent-soft);
       padding: 6px 9px;
       border-radius: 999px;
@@ -234,14 +260,14 @@
   <header>
     <div class="container">
       <div class="eyebrow">
-        Digital Anthropology · Computational Anthropology · Platform Culture
+        Digital Humanities · Computational Social Science · Mixed Methods · AI
       </div>
 
       <h1>Ji-Eun Son</h1>
 
       <p class="lead">
         Interdisciplinary researcher interested in how AI systems, digital platforms,
-        and computational methods reshape cultural experience, emotion, communication,
+        and mixed methods reshape cultural experience, emotion, communication,
         and everyday human interaction.
       </p>
 
@@ -262,8 +288,8 @@
       <div class="grid">
         <div class="card span-8">
           <p>
-            My research lies at the intersection of digital anthropology,
-            computational social science, and human-centered AI.
+            My research lies at the intersection of digital humanities,
+            computational social science, mixed methods, and human-centered AI.
             I am particularly interested in how AI systems, digital platforms,
             and data-driven environments reshape cultural experience,
             emotion, communication, and everyday human interaction.
@@ -271,34 +297,34 @@
 
           <p>
             Using computational methods such as NLP, sentiment analysis,
-            topic modeling, and behavioral data analysis, I explore how digital traces —
-            including reviews, platform interactions, and user-generated content —
-            can be interpreted as cultural and social phenomena.
+            topic modeling, behavioral data analysis, and AI-assisted interpretation,
+            I explore how digital traces — including reviews, platform interactions,
+            and user-generated content — can be interpreted as cultural and social phenomena.
           </p>
 
           <p>
-            My broader goal is to bridge computational methods with cultural interpretation,
+            My broader goal is to bridge computational methods with qualitative interpretation,
             especially in areas related to platform culture, AI-mediated experience,
             digital communication, and emerging forms of human-technology relationships.
           </p>
 
           <div class="quote">
-            How can computational methods help us understand the cultural meanings,
-            emotions, and human experiences embedded in digital traces?
+            How can computational and mixed-methods approaches help us understand
+            the cultural meanings, emotions, and human experiences embedded in digital traces?
           </div>
         </div>
 
         <div class="card span-4">
           <h3>Research Interests</h3>
           <ul>
-            <li>Digital Anthropology</li>
+            <li>Digital Humanities</li>
+            <li>Computational Social Science</li>
+            <li>Mixed Methods</li>
             <li>AI and Human Interaction</li>
             <li>Platform Culture</li>
             <li>Emotion Data and Digital Culture</li>
-            <li>Digital Ethnography</li>
             <li>Review Data-based Cultural Analysis</li>
             <li>AI Character & Emoticon Culture</li>
-            <li>Computational Anthropology</li>
           </ul>
         </div>
       </div>
@@ -522,6 +548,45 @@
 
       <div class="grid">
 
+        <article class="card featured-card span-12">
+          <span class="featured-label">Main WikiDocs Project</span>
+
+          <div class="project-title">
+            <h3>Did Platforms Sense the Nobel Prize Before Institutions Did?</h3>
+            <small>Goodreads · Nobel Prize · Digital Culture</small>
+          </div>
+
+          <p class="tagline">
+            A computational culture and platform analysis project exploring whether
+            platform-based reader responses anticipated institutional literary recognition
+            before the 2024 Nobel Prize in Literature announcement.
+          </p>
+
+          <ul>
+            <li>Analyzed Goodreads review data related to Han Kang’s <em>The Vegetarian</em>.</li>
+            <li>Combined multilingual review translation, sentiment analysis, BERTopic, and temporal analysis to examine global reader responses.</li>
+            <li>Explored how platform-generated cultural signals may precede institutional recognition in world literature.</li>
+            <li>Positioned digital traces not merely as behavioral data, but as cultural evidence embedded in platform ecosystems.</li>
+            <li>Connected computational methods with literary interpretation, platform studies, and cultural data analysis.</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Goodreads</span>
+            <span class="tag">Platform Culture</span>
+            <span class="tag">World Literature</span>
+            <span class="tag">Han Kang</span>
+            <span class="tag">The Vegetarian</span>
+            <span class="tag">Sentiment Analysis</span>
+            <span class="tag">BERTopic</span>
+            <span class="tag">Mixed Methods</span>
+            <span class="tag">Computational Interpretation</span>
+          </div>
+
+          <div class="actions">
+            <a class="btn" href="https://wikidocs.net/book/19752" target="_blank">WikiDocs</a>
+          </div>
+        </article>
+
         <article class="card span-4">
           <h3>Statistics with Social Science Data</h3>
           <p class="tagline">
@@ -701,20 +766,21 @@
         </p>
 
         <p>
-          I am particularly interested in combining digital ethnography with computational methods
-          such as review data analysis, sentiment analysis, topic modeling, and platform behavior analysis.
-          This approach allows digital traces to be interpreted not only as data points,
-          but as cultural expressions of everyday experience.
+          I am particularly interested in combining computational methods with qualitative interpretation,
+          including review data analysis, sentiment analysis, topic modeling, platform behavior analysis,
+          close reading, and contextual interpretation. This mixed-methods approach allows digital traces
+          to be interpreted not only as data points, but as cultural expressions of everyday experience.
         </p>
 
         <p>
-          This direction connects digital anthropology, computational anthropology,
+          This direction connects digital humanities, computational social science,
           platform studies, AI-mediated communication, and human-technology interaction.
         </p>
 
         <div class="tags">
-          <span class="tag">Digital Ethnography</span>
-          <span class="tag">Computational Anthropology</span>
+          <span class="tag">Digital Humanities</span>
+          <span class="tag">Computational Social Science</span>
+          <span class="tag">Mixed Methods</span>
           <span class="tag">Platform Culture</span>
           <span class="tag">Human-Technology Interaction</span>
         </div>
@@ -749,27 +815,34 @@
       </div>
     </section>
 
-    <section id="why-digital-anthropology">
-      <h2>Why Digital Anthropology?</h2>
+    <section id="why-digital-humanities">
+      <h2>Why Digital Humanities?</h2>
 
       <div class="card span-12">
         <p>
           My intellectual path has been shaped by both cultural curiosity and analytical training.
-          Since adolescence, I have been deeply engaged with films, music, language, and cross-cultural experience,
-          not only as personal interests but as cultural forms that shape emotion, memory, identity,
-          and social imagination.
+          Since adolescence, I have been deeply engaged with films, music, literature, language,
+          and cross-cultural experience, not only as personal interests but as cultural forms that
+          shape emotion, memory, identity, and social imagination.
         </p>
 
         <p>
           Through sociology, I learned to ask how individuals are shaped by structures, institutions,
           and cultural contexts. Through data science and AI projects, I learned how large-scale
-          behavioral traces can be modeled, interpreted, and translated into research questions.
+          behavioral and textual traces can be modeled, interpreted, and translated into research questions.
         </p>
 
         <p>
-          Digital anthropology is where these paths converge. I hope to study AI and digital platforms
-          not merely as technical systems, but as cultural infrastructures that increasingly mediate
-          how people communicate, express emotion, form taste, build relationships, and create meaning.
+          Digital humanities is where these paths converge. It allows me to combine computational methods,
+          AI-based analysis, statistical reasoning, close reading, and contextual interpretation in order
+          to study how people express emotion, form taste, communicate meaning, and respond to cultural works
+          within digital platforms.
+        </p>
+
+        <p>
+          Rather than treating data analysis and interpretation as separate activities, I aim to develop
+          a mixed-methods research practice in which computational results become the starting point for
+          deeper cultural, social, and humanistic interpretation.
         </p>
       </div>
     </section>
@@ -811,8 +884,7 @@
 
   <footer>
     <div class="container">
-      © 2026 Ji-Eun Son. Portfolio for graduate research opportunities in Digital Anthropology,
-      Computational Anthropology, and Platform Culture.
+      © 2026 Ji-Eun Son. Portfolio.
     </div>
   </footer>
 </body>
