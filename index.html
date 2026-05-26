@@ -137,6 +137,46 @@
       background: linear-gradient(180deg, #ffffff 0%, #f4f3ff 100%);
     }
 
+    .award-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .award-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(79, 70, 229, 0.13), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, #f4f3ff 100%);
+      z-index: 0;
+    }
+
+    .award-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .award-title {
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .essay-title {
+      font-size: 1.08rem;
+      margin: 4px 0 6px;
+      color: var(--accent-deep);
+      font-weight: 800;
+    }
+
+    .subtitle {
+      display: block;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 4px;
+    }
+
     .span-4 { grid-column: span 4; }
     .span-6 { grid-column: span 6; }
     .span-8 { grid-column: span 8; }
@@ -681,6 +721,49 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Awards & Recognition</h2>
+
+      <div class="grid">
+        <article class="card featured-card award-card span-12">
+          <span class="featured-label">Writing Award</span>
+
+          <div class="project-title">
+            <h3 class="award-title">Encouragement Award, Lifeary 1st Writing Contest <em>Stagnation</em> (停滯)</h3>
+            <small>Essay · Literary Writing · 2026</small>
+          </div>
+
+          <p class="essay-title">
+            “A Time to Take Root”
+            <span class="subtitle">
+              Stagnation was not a pause, but a time when direction turned inward.
+            </span>
+          </p>
+
+          <p>
+            Received the Encouragement Award at the Lifeary 1st Writing Contest
+            <em>Stagnation</em> (停滯) for the essay <strong>“A Time to Take Root.”</strong>
+            The work reflects on stagnation not as a simple state of stillness,
+            but as a quiet inward turn — a season of taking root, enduring time,
+            and preparing for a future direction.
+          </p>
+
+          <div class="quote">
+            Stagnation was not a pause, but a time when direction turned inward.
+          </div>
+
+          <div class="tags">
+            <span class="tag">Writing Award</span>
+            <span class="tag">Essay</span>
+            <span class="tag">Lifeary</span>
+            <span class="tag">Stagnation</span>
+            <span class="tag">停滯</span>
+            <span class="tag">A Time to Take Root</span>
+          </div>
+        </article>
       </div>
     </section>
 
