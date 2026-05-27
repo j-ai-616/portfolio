@@ -282,29 +282,29 @@
 
     .digital-portrait-content {
       display: grid;
-      grid-template-columns: minmax(220px, 0.9fr) 1.1fr;
+      grid-template-columns: 0.72fr 1.28fr;
       gap: 28px;
-      align-items: stretch;
+      align-items: center;
+      padding: 26px;
     }
 
     .digital-portrait-image {
-      min-height: 100%;
       background: var(--accent-soft);
+      border-radius: 16px;
       overflow: hidden;
-      border-radius: 18px 0 0 18px;
+      align-self: center;
     }
 
     .digital-portrait-image img {
       width: 100%;
-      height: 100%;
-      min-height: 360px;
-      object-fit: cover;
-      object-position: center;
+      max-height: 320px;
+      aspect-ratio: 4 / 5;
+      object-fit: contain;
       display: block;
     }
 
     .digital-portrait-text {
-      padding: 30px 30px 30px 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -399,18 +399,23 @@
 
       .digital-portrait-content {
         grid-template-columns: 1fr;
+        padding: 22px;
       }
 
       .digital-portrait-image {
-        border-radius: 18px 18px 0 0;
+        width: min(100%, 340px);
+        margin: 0 auto;
+        border-radius: 16px;
       }
 
       .digital-portrait-image img {
-        min-height: 320px;
+        max-height: 300px;
+        aspect-ratio: 4 / 5;
+        object-fit: contain;
       }
 
       .digital-portrait-text {
-        padding: 0 24px 26px;
+        padding: 0;
       }
 
 
