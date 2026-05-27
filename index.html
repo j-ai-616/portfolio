@@ -275,6 +275,62 @@
     }
 
 
+    .digital-portrait-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .digital-portrait-content {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.9fr) 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .digital-portrait-image {
+      min-height: 100%;
+      background: var(--accent-soft);
+      overflow: hidden;
+      border-radius: 18px 0 0 18px;
+    }
+
+    .digital-portrait-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .digital-portrait-text {
+      padding: 30px 30px 30px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .digital-portrait-label {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .digital-portrait-title {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+
+
     .character-ip-content {
       display: flex;
       align-items: center;
@@ -338,6 +394,23 @@
 
       .character-ip-visual img {
         width: 92px;
+      }
+
+
+      .digital-portrait-content {
+        grid-template-columns: 1fr;
+      }
+
+      .digital-portrait-image {
+        border-radius: 18px 18px 0 0;
+      }
+
+      .digital-portrait-image img {
+        min-height: 320px;
+      }
+
+      .digital-portrait-text {
+        padding: 0 24px 26px;
       }
 
 
@@ -417,6 +490,31 @@
             <li>AI Character & Emoticon Culture</li>
           </ul>
         </div>
+
+        <article class="card digital-portrait-card span-12">
+          <div class="digital-portrait-content">
+            <div class="digital-portrait-image">
+              <img
+                src="https://i.ibb.co/ymG8FThZ/jieunson.jpg"
+                alt="Ji-Eun Son holding a smartphone frame, representing digital humanities and mediated vision"
+              />
+            </div>
+
+            <div class="digital-portrait-text">
+              <span class="digital-portrait-label">Digital Humanities Portrait</span>
+              <h3 class="digital-portrait-title">Seeing culture through digital frames</h3>
+              <p>
+                This portrait reflects my interest in mediated vision: how people see,
+                interpret, and represent themselves through screens, platforms, images,
+                interfaces, and everyday digital tools.
+              </p>
+              <p class="note">
+                In this portfolio, the image works as a visual bridge between computational
+                methods, cultural interpretation, and human-centered digital experience.
+              </p>
+            </div>
+          </div>
+        </article>
       </div>
     </section>
 
