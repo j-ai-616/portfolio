@@ -289,6 +289,7 @@
     }
 
     .digital-portrait-image {
+      width: min(100%, 320px);
       background: var(--accent-soft);
       border-radius: 16px;
       overflow: hidden;
@@ -297,9 +298,8 @@
 
     .digital-portrait-image img {
       width: 100%;
-      max-height: 320px;
-      aspect-ratio: 4 / 5;
-      object-fit: contain;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
       display: block;
     }
 
@@ -410,7 +410,7 @@
 
       .digital-portrait-image img {
         max-height: 300px;
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 1 / 1;
         object-fit: contain;
       }
 
@@ -500,7 +500,7 @@
           <div class="digital-portrait-content">
             <div class="digital-portrait-image">
               <img
-                src="https://i.ibb.co/ymG8FThZ/jieunson.jpg"
+                src="https://i.ibb.co/gZtw9mg0/image.jpg"
                 alt="Ji-Eun Son holding a smartphone frame, representing digital humanities and mediated vision"
               />
             </div>
