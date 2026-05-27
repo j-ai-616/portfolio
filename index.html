@@ -276,24 +276,25 @@
 
 
     .digital-portrait-card {
-      overflow: hidden;
-      padding: 0;
+      overflow: visible;
+      padding: 26px;
     }
 
     .digital-portrait-content {
       display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: 28px;
+      grid-template-columns: 300px 1fr;
+      gap: 34px;
       align-items: center;
-      padding: 26px;
     }
 
     .digital-portrait-image {
-      width: min(100%, 320px);
+      width: 300px;
+      max-width: 100%;
       background: var(--accent-soft);
-      border-radius: 16px;
+      border-radius: 18px;
       overflow: hidden;
       align-self: center;
+      box-shadow: 0 10px 24px rgba(30, 35, 48, 0.08);
     }
 
     .digital-portrait-image img {
@@ -397,21 +398,24 @@
       }
 
 
-      .digital-portrait-content {
-        grid-template-columns: 1fr;
+      .digital-portrait-card {
         padding: 22px;
       }
 
+      .digital-portrait-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
       .digital-portrait-image {
-        width: min(100%, 340px);
+        width: min(100%, 320px);
         margin: 0 auto;
-        border-radius: 16px;
+        border-radius: 18px;
       }
 
       .digital-portrait-image img {
-        max-height: 300px;
         aspect-ratio: 1 / 1;
-        object-fit: contain;
+        object-fit: cover;
       }
 
       .digital-portrait-text {
